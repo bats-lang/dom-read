@@ -19,15 +19,11 @@ $DR.get_x()    : int
 $DR.get_y()    : int
 $DR.get_w()    : int
 $DR.get_h()    : int
-$DR.get_top()  : int
-$DR.get_left() : int
+$DR.get_scroll_w() : int
+$DR.get_scroll_h() : int
 
 (* Query a DOM element by CSS selector.
    Returns node_id if found, -1 otherwise. *)
-$DR.query_selector{lb:agz}{n:nat}
+$DR.query_selector{lb:agz}{n:pos}
   (selector: !A.borrow(byte, lb, n), selector_len: int n) : int
 ```
-
-## Dependencies
-
-- **array**
