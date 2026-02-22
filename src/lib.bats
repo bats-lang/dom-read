@@ -7,7 +7,7 @@
 #use result as R
 
 #pub fun measure
-  (node_id: int): $R.result(int)
+  (node_id: int): $R.result(int, int)
 
 #pub fun get_x(): int
 
