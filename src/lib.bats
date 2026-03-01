@@ -7,7 +7,8 @@
 #use result as R
 
 #pub fun measure
-  (node_id: int): $R.result(int, int)
+  {li:agz}{ni:pos}
+  (node_id: !$A.borrow(byte, li, ni), id_len: int ni): $R.result(int, int)
 
 #pub fun get_x(): int
 
@@ -25,7 +26,7 @@
   {lb:agz}{n:pos}
   (sel: !$A.borrow(byte, lb, n), sel_len: int n): $R.option(int)
 
-implement measure(node_id) = $B.measure(node_id)
+implement measure{li}{ni}(node_id, id_len) = $B.measure(node_id, id_len)
 
 implement get_x() = $B.get_measure_x()
 implement get_y() = $B.get_measure_y()

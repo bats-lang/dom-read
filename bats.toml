@@ -1,3 +1,8 @@
 [package]
 name = "wasm.bats-packages.dev/dom-read"
 kind = "lib"
+
+[dependencies]
+"wasm.bats-packages.dev/bridge" = ""
+"array" = ""
+"result" = ""
